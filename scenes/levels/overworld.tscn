@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://b5co6ooaqxoup"]
+[gd_scene load_steps=30 format=3 uid="uid://b5co6ooaqxoup"]
 
 [ext_resource type="PackedScene" uid="uid://ba5n0ovwgr8lc" path="res://scenes/levels/level.tscn" id="1_ir56p"]
+[ext_resource type="PackedScene" uid="uid://d327n5upxfjam" path="res://scenes/entities/enemies/skeleton_warrior.tscn" id="2_lot5k"]
 [ext_resource type="PackedScene" uid="uid://cemytfet0p4pv" path="res://scenes/levels/overworld_skin.tscn" id="2_qihoi"]
 [ext_resource type="PackedScene" uid="uid://defd80nyuanxo" path="res://graphics/environment/objects/barrel.glb" id="2_x035b"]
 [ext_resource type="PackedScene" uid="uid://bkmfvv8om32xq" path="res://graphics/environment/objects/tree1.glb" id="3_tkdc4"]
@@ -36,7 +37,23 @@ albedo_color = Color(0, 0.501961, 1, 1)
 [node name="Overworld" instance=ExtResource("1_ir56p")]
 
 [node name="player" parent="entities" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.777, -1.96722, 381.212)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4571, -34.8718, 212.161)
+
+[node name="enemies" type="Node3D" parent="entities" index="1"]
+
+[node name="warrior" type="Node3D" parent="entities/enemies" index="0"]
+
+[node name="SkeletonWarrior" parent="entities/enemies/warrior" index="0" instance=ExtResource("2_lot5k")]
+transform = Transform3D(-0.710996, 0, 0.703196, 0, 1, 0, -0.703196, 0, -0.710996, -141.419, -32.7623, 130.859)
+
+[node name="SkeletonWarrior4" parent="entities/enemies/warrior" index="1" instance=ExtResource("2_lot5k")]
+transform = Transform3D(-0.710996, 0, 0.703196, 0, 1, 0, -0.703196, 0, -0.710996, -142.048, -32.7544, 128.257)
+
+[node name="SkeletonWarrior2" parent="entities/enemies/warrior" index="2" instance=ExtResource("2_lot5k")]
+transform = Transform3D(-0.97369, 0, 0.227875, 0, 1, 0, -0.227875, 0, -0.97369, -139.12, -32.7575, 132.22)
+
+[node name="SkeletonWarrior3" parent="entities/enemies/warrior" index="3" instance=ExtResource("2_lot5k")]
+transform = Transform3D(-0.970355, 0, -0.241685, 0, 1, 0, 0.241685, 0, -0.970355, -136.711, -32.7399, 132.076)
 
 [node name="overworld_environment" parent="environment" index="0" instance=ExtResource("2_qihoi")]
 
@@ -960,7 +977,7 @@ transform = Transform3D(-0.0763013, 0, -0.997085, 0, 1, 0, 0.997085, 0, -0.07630
 transform = Transform3D(0.584405, 0, -0.811462, 0, 1, 0, 0.811462, 0, 0.584405, 126.567, -34.1924, 125.23)
 
 [node name="tree309" parent="environment/trees" index="304" instance=ExtResource("4_y5pk3")]
-transform = Transform3D(-0.0763013, 0, -0.997085, 0, 1, 0, 0.997085, 0, -0.0763013, 152.584, -42.4179, 157.868)
+transform = Transform3D(-0.0763013, 0, -0.997085, 0, 1, 0, 0.997085, 0, -0.0763013, 155.787, -42.4179, 147.387)
 
 [node name="tree310" parent="environment/trees" index="305" instance=ExtResource("5_dd547")]
 transform = Transform3D(-0.0763013, 0, -0.997085, 0, 1, 0, 0.997085, 0, -0.0763013, 141.729, -40.4703, 143.848)
@@ -1253,7 +1270,7 @@ transform = Transform3D(-0.89544, 0, 0.445182, 0, 1, 0, -0.445182, 0, -0.89544, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.3973, -32.8086, 308.031)
 
 [node name="barrel13" parent="environment/camp" index="80" instance=ExtResource("2_x035b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.0533, -31.2163, 306.531)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.0533, -33.1623, 306.531)
 
 [node name="barrel14" parent="environment/camp" index="81" instance=ExtResource("2_x035b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.9715, -32.8733, 310.81)
@@ -1371,7 +1388,7 @@ transform = Transform3D(-0.395882, 0, -0.918302, 0, 1, 0, 0.918302, 0, -0.395882
 transform = Transform3D(0.543526, 0, 0.839392, 0, 1, 0, -0.839392, 0, 0.543526, 117.274, -30.3105, 350.582)
 
 [node name="rock5" parent="environment/rocks" index="3" instance=ExtResource("26_km41g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -109.177, 0.0285149, 7.38177)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -109.177, -4.07365, -3.71164)
 
 [node name="rocks2" parent="environment/rocks" index="4" instance=ExtResource("22_ynx4l")]
 transform = Transform3D(0.882464, 0, 0.470381, 0, 1, 0, -0.470381, 0, 0.882464, 24.8048, -32.82, 74.4394)
